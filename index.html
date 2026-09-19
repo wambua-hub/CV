@@ -1,0 +1,944 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Esther Walusaka | Personal CV</title>
+
+    <style>
+        /* =========================
+           GENERAL STYLING
+        ========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f7fa;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        section {
+            padding: 80px 8%;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 32px;
+            color: #123b66;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #777;
+        }
+
+
+        /* =========================
+           NAVIGATION BAR
+        ========================== */
+
+        header {
+            background: #123b66;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+        }
+
+        nav {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 25px;
+        }
+
+        .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #f5b041;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: white;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #f5b041;
+        }
+
+
+        /* =========================
+           HOME / HERO SECTION
+        ========================== */
+
+        #home {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #123b66, #1d668f);
+            color: white;
+        }
+
+        .hero {
+            max-width: 1100px;
+            width: 100%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-text h1 {
+            font-size: 52px;
+            margin-bottom: 15px;
+        }
+
+        .hero-text h1 span {
+            color: #f5b041;
+        }
+
+        .hero-text h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #e5e5e5;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            max-width: 650px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #f5b041;
+            color: #123b66;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: white;
+            transform: translateY(-3px);
+        }
+
+        .profile-box {
+            width: 260px;
+            height: 260px;
+            border-radius: 50%;
+            background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #123b66;
+            font-size: 75px;
+            font-weight: bold;
+            border: 8px solid #f5b041;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+        }
+
+
+        /* =========================
+           ABOUT SECTION
+        ========================== */
+
+        #about {
+            background: white;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 26px;
+            color: #123b66;
+            margin-bottom: 15px;
+        }
+
+        .about-text p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .personal-info {
+            background: #f5f7fa;
+            padding: 30px;
+            border-left: 5px solid #f5b041;
+            border-radius: 8px;
+        }
+
+        .personal-info p {
+            margin-bottom: 12px;
+        }
+
+        .personal-info strong {
+            color: #123b66;
+        }
+
+
+        /* =========================
+           EDUCATION SECTION
+        ========================== */
+
+        #education {
+            background: #f5f7fa;
+        }
+
+        .education-container {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .education-item {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-left: 5px solid #123b66;
+            border-radius: 8px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .education-item:hover {
+            transform: translateX(8px);
+        }
+
+        .education-item h3 {
+            color: #123b66;
+            margin-bottom: 5px;
+        }
+
+        .education-item .year {
+            color: #f09a19;
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           SKILLS SECTION
+        ========================== */
+
+        #skills {
+            background: white;
+        }
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .skill {
+            background: #f5f7fa;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill h3 {
+            color: #123b66;
+            margin-bottom: 8px;
+        }
+
+        .skill p {
+            color: #666;
+        }
+
+
+        /* =========================
+           EXPERIENCE SECTION
+        ========================== */
+
+        #experience {
+            background: #f5f7fa;
+        }
+
+        .experience-box {
+            background: white;
+            max-width: 900px;
+            margin: auto;
+            padding: 35px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .experience-box h3 {
+            color: #123b66;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .experience-box ul {
+            margin-top: 15px;
+            margin-left: 25px;
+        }
+
+        .experience-box li {
+            margin-bottom: 10px;
+        }
+
+
+        /* =========================
+           REFEREES SECTION
+        ========================== */
+
+        #referees {
+            background: white;
+        }
+
+        .referee-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .referee {
+            background: #f5f7fa;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            border-top: 5px solid #123b66;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .referee h3 {
+            color: #123b66;
+            margin-bottom: 8px;
+        }
+
+        .referee p {
+            color: #666;
+        }
+
+
+        /* =========================
+           CONTACT SECTION
+        ========================== */
+
+        #contact {
+            background: #123b66;
+            color: white;
+        }
+
+        #contact .section-title h2 {
+            color: white;
+        }
+
+        #contact .section-title p {
+            color: #ddd;
+        }
+
+        .contact-container {
+            max-width: 700px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .contact-item {
+            background: rgba(255,255,255,0.1);
+            margin: 15px 0;
+            padding: 18px;
+            border-radius: 8px;
+        }
+
+        .contact-item strong {
+            color: #f5b041;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            background: #092943;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        footer span {
+            color: #f5b041;
+        }
+
+
+        /* =========================
+           RESPONSIVE DESIGN
+        ========================== */
+
+        @media (max-width: 768px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+                padding: 40px 20px;
+            }
+
+            .hero-text h1 {
+                font-size: 38px;
+            }
+
+            .profile-box {
+                width: 190px;
+                height: 190px;
+                font-size: 55px;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
+
+            .referee-container {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 60px 6%;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <header>
+        <nav>
+
+            <div class="logo">
+                Esther<span>.</span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#referees">Referees</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <!-- =========================
+         HOME
+    ========================== -->
+
+    <section id="home">
+
+        <div class="hero">
+
+            <div class="hero-text">
+
+                <h1>Hello, I'm <span>Esther Walusaka</span></h1>
+
+                <h3>Information Science</h3>
+
+                <p>
+                    Welcome to my personal CV website. I am an Information
+                    Science student with an interest in information management,
+                    digital creativity and technology.
+                </p>
+
+                <a href="#about" class="btn">Explore My CV</a>
+
+            </div>
+
+
+            <div class="profile-box">
+                EW
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT
+    ========================== -->
+
+    <section id="about">
+
+        <div class="container">
+
+            <div class="section-title">
+                <h2>About Me</h2>
+                <p>Get to know me</p>
+            </div>
+
+
+            <div class="about-content">
+
+                <div class="about-text">
+
+                    <h3>Who I Am</h3>
+
+                    <p>
+                        My name is Esther Walusaka. I am an Information Science
+                        student at Kisii University. I am interested in the
+                        management, organization, preservation and accessibility
+                        of information.
+                    </p>
+
+                    <p>
+                        I also have practical skills in graphic design and
+                        printing work gained through working at a cyber
+                        environment. I enjoy using technology and creative
+                        skills to solve problems and produce useful digital
+                        and printed materials.
+                    </p>
+
+                    <p>
+                        My goal is to continue developing my technical,
+                        creative and professional skills while gaining
+                        practical experience that will prepare me for my
+                        future career.
+                    </p>
+
+                </div>
+
+
+                <div class="personal-info">
+
+                    <p><strong>Name:</strong> Esther Walusaka</p>
+
+                    <p><strong>Course:</strong> Information Science</p>
+
+                    <p><strong>University:</strong> Kisii University</p>
+
+                    <p><strong>Career Interest:</strong> Information Management & Digital Design</p>
+
+                    <p><strong>Phone:</strong> 0758968480</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         EDUCATION
+    ========================== -->
+
+    <section id="education">
+
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Education Background</h2>
+                <p>My academic journey</p>
+            </div>
+
+
+            <div class="education-container">
+
+                <div class="education-item">
+
+                    <h3>Mtoni Primary School</h3>
+
+                    <p class="year">2013 - 2020</p>
+
+                    <p>
+                        Primary School Education
+                    </p>
+
+                </div>
+
+
+                <div class="education-item">
+
+                    <h3>Matunda SA</h3>
+
+                    <p class="year">2021 - 2024</p>
+
+                    <p>
+                        Secondary School Education
+                    </p>
+
+                </div>
+
+
+                <div class="education-item">
+
+                    <h3>Kisii University</h3>
+
+                    <p class="year">2025 - Present</p>
+
+                    <p>
+                        Bachelor of Information Science
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SKILLS
+    ========================== -->
+
+    <section id="skills">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>My Skills</h2>
+
+                <p>
+                    Skills gained through education, graphic design
+                    and cyber/printing work
+                </p>
+
+            </div>
+
+
+            <div class="skills-container">
+
+                <div class="skill">
+
+                    <h3>Graphic Design</h3>
+
+                    <p>
+                        Creating posters, flyers, social media graphics,
+                        advertisements and other visual materials.
+                    </p>
+
+                </div>
+
+
+                <div class="skill">
+
+                    <h3>Printing</h3>
+
+                    <p>
+                        Experience in printing documents, posters,
+                        photos and other digital materials.
+                    </p>
+
+                </div>
+
+
+                <div class="skill">
+
+                    <h3>Adobe Photoshop</h3>
+
+                    <p>
+                        Basic graphic editing, photo manipulation,
+                        designing and image enhancement.
+                    </p>
+
+                </div>
+
+
+                <div class="skill">
+
+                    <h3>Canva</h3>
+
+                    <p>
+                        Designing posters, flyers, social media posts,
+                        presentations and other creative materials.
+                    </p>
+
+                </div>
+
+
+                <div class="skill">
+
+                    <h3>Document Preparation</h3>
+
+                    <p>
+                        Preparing, formatting and printing documents
+                        using computer applications.
+                    </p>
+
+                </div>
+
+
+                <div class="skill">
+
+                    <h3>Computer Skills</h3>
+
+                    <p>
+                        General computer operation, file management,
+                        internet use and digital document handling.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         EXPERIENCE
+    ========================== -->
+
+    <section id="experience">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Experience</h2>
+
+                <p>Practical experience and abilities</p>
+
+            </div>
+
+
+            <div class="experience-box">
+
+                <h3>Graphic Design & Printing Work</h3>
+
+                <p>
+                    I have gained practical experience working in a cyber
+                    environment where I have developed skills in graphic
+                    design, printing and general computer services.
+                </p>
+
+
+                <ul>
+
+                    <li>Designing posters and flyers.</li>
+
+                    <li>Creating social media graphics.</li>
+
+                    <li>Editing images and photographs.</li>
+
+                    <li>Printing documents and graphic materials.</li>
+
+                    <li>Preparing and formatting documents.</li>
+
+                    <li>Handling digital files and computer-based tasks.</li>
+
+                    <li>Assisting customers with computer and printing services.</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         REFEREES
+    ========================== -->
+
+    <section id="referees">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Referees</h2>
+
+                <p>Professional contacts</p>
+
+            </div>
+
+
+            <div class="referee-container">
+
+                <div class="referee">
+
+                    <h3>Walter Weswa</h3>
+
+                    <p>Referee</p>
+
+                    <p>
+                        Phone: 0769562869
+                    </p>
+
+                </div>
+
+
+                <div class="referee">
+
+                    <h3>Mr. John Kiarie</h3>
+
+                    <p>Principal</p>
+
+                    <p>
+                        Phone: 0769354658
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
+    <section id="contact">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Contact Me</h2>
+
+                <p>
+                    Feel free to get in touch with me
+                </p>
+
+            </div>
+
+
+            <div class="contact-container">
+
+                <div class="contact-item">
+
+                    <strong>Name:</strong><br>
+                    Esther Walusaka
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <strong>Phone:</strong><br>
+                    0758968480
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <strong>University:</strong><br>
+                    Kisii University
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <strong>Course:</strong><br>
+                    Bachelor of Information Science
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p>
+            &copy; 2026 <span>Esther Walusaka</span>.
+            All Rights Reserved.
+        </p>
+
+        <p>
+            Personal CV Website | BIT 202 Web Programming
+        </p>
+
+    </footer>
+
+
+</body>
+</html>
